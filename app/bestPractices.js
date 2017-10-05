@@ -9,18 +9,19 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.bestPracticesAnswers = {
   globals: function() {
-    myObject = {
+    let myObject = {
       name: 'Jory'
     };
-
     return myObject;
   },
 
+  // you should use parseInt correctly
   parseInt: function(num) {
-    return parseInt(num);
+    return parseInt(num, 10);
   },
 
+  // you should understand strict comparison
   identity: function(val1, val2) {
-
+    return val1 === val2
   }
 };
